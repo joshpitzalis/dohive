@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import CountDown from '../components/CountDown';
 import NewItem from '../components/NewItem';
 import Items from '../components/Items';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import {
   addNewItem,
@@ -35,6 +36,7 @@ class Application extends PureComponent {
     return (
       <React.StrictMode>
         <div className="Application">
+          <Link to="/activity">Activity</Link>
           <NewItem addItem={doAddNewItem} />
           <CountDown />
           <Items

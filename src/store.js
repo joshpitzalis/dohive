@@ -1,6 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import uniqueId from 'lodash/uniqueId';
 import reducers from './rootReducer';
+import thunk from 'redux-thunk';
 
 const items = [
   { value: 'Pants', id: uniqueId(), packed: false },
@@ -17,7 +18,7 @@ const items = [
 ];
 
 const initialState = { items };
-const middleware = [];
+const middleware = [thunk];
 const enhancers = [];
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

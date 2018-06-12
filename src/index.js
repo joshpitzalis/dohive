@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/index.css';
 import Login from './pages/Login';
 import registerServiceWorker from './registerServiceWorker';
 import Dashboard from './pages/Dashboard';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './store';
+import Activity from './pages/Activity';
 
 const Routes = () => (
   <BrowserRouter>
     <div>
       <Route exact path="/" component={Login} />
       <Route path="/dashboard" component={Dashboard} />
+      <Route path="/activity" component={Activity} />
     </div>
   </BrowserRouter>
 );

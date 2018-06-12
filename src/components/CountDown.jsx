@@ -1,27 +1,27 @@
 import React, { Component } from 'react';
 
-import calculateTimeLeft from '../lib/calculate-time-left';
+import { calculateTime } from '../features/activity/helpers';
 
 export default class CountDown extends Component {
   state = {
-    timeLeft: calculateTimeLeft()
+    timer: calculateTime()
   };
 
-  componentDidMount() {
+  startTimer = () => {
     this.countDownInterval = setInterval(() => {
-      this.setState({ timeLeft: calculateTimeLeft() });
+      this.setState({ timer: calculateTime(Date.now()) });
     }, 500);
-  }
+  };
 
   componentWillUnmount() {
     clearInterval(this.countDownInterval);
   }
 
   render() {
-    const { timeLeft } = this.state;
+    const { timer } = this.state;
     return (
-      <div className="CountDown">
-        The Lyft will be here in about {timeLeft}.
+      <div className="big b pa3" onClick={() => this.startTimer()}>
+        {timer}
       </div>
     );
   }

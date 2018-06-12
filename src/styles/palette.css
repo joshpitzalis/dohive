@@ -1,0 +1,26 @@
+.bg-purple {
+  background-color: #332b3f;
+}
+
+.red {
+  color: red;
+}
+[data-white] {
+  background-color: #e7e6e1;
+}
+
+[data-orange] {
+  background-color: #e19c31;
+}
+
+[data-red] {
+  background-color: #df853d;
+}
+
+[data-yellow] {
+  background-color: #e6ba47;
+}
+
+[data-black] {
+  background-color: #2d2a2e;
+}
