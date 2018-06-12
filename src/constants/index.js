@@ -1,0 +1,4 @@
+export const ADDED_NEW_ITEM = 'ADDED_NEW_ITEM';
+export const REMOVED_ITEM = 'REMOVED_ITEM';
+export const TOGGLED_ITEM = 'TOGGLED_ITEM';
+export const MARKED_ALL_AS_UNPACKED = 'MARKED_ALL_AS_UNPACKED';

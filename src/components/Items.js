@@ -31,7 +31,7 @@ class Items extends Component {
             <Item
               key={item.id}
               onToggle={onToggle}
-              onRemove={() => onRemove(item)}
+              onRemove={() => onRemove(item.id)}
               item={item}
             />
           ))}

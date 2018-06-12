@@ -9,7 +9,7 @@ class Item extends Component {
           <input
             type="checkbox"
             checked={item.packed}
-            onChange={() => onToggle(item)}
+            onChange={() => onToggle(item.id)}
             id={item.id}
           />
           {item.value}

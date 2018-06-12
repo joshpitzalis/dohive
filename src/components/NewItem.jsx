@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import uniqueId from 'lodash/uniqueId';
 class NewItem extends Component {
   state = { value: '' };
 
@@ -14,7 +13,7 @@ class NewItem extends Component {
 
     event.preventDefault();
 
-    addItem({ value, id: uniqueId, packed: false });
+    addItem(value);
     this.setState({ value: '' });
   };
 

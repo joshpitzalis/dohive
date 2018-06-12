@@ -4,18 +4,23 @@ import './index.css';
 import Login from './pages/Login';
 import registerServiceWorker from './registerServiceWorker';
 import Dashboard from './pages/Dashboard';
-
-import { Router, Link } from '@reach/router';
-
-let Auth = () => <Login />;
-let Dash = () => <Dashboard />;
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
 const Routes = () => (
-  <Router>
-    <Auth path="/" />
-    <Dash path="dashboard" />
-  </Router>
+  <BrowserRouter>
+    <div>
+      <Route exact path="/" component={Login} />
+      <Route path="/dashboard" component={Dashboard} />
+    </div>
+  </BrowserRouter>
 );
 
-ReactDOM.render(<Routes />, document.getElementById('root'));
+ReactDOM.render(
+  <Provider store={store}>
+    <Routes />
+  </Provider>,
+  document.getElementById('root')
+);
 registerServiceWorker();
