@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import CountDown from '../components/CountDown';
+import Timer from '../components/Timer';
 import NewItem from '../components/NewItem';
 import Items from '../components/Items';
 import { Link } from 'react-router-dom';
@@ -38,7 +38,7 @@ class Application extends PureComponent {
         <div className="Application">
           <Link to="/activity">Activity</Link>
           <NewItem addItem={doAddNewItem} />
-          <CountDown />
+          <Timer />
           <Items
             title="Unpacked Items"
             items={unpackedItems}

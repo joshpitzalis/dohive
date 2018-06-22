@@ -14,5 +14,14 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
-.item {
+.dense {
+  grid-auto-flow: dense;
+}
+
+.span-c2 {
+  grid-column: span 2;
+}
+
+.span-r2 {
+  grid-row: span 2;
 }

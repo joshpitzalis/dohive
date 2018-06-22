@@ -12,9 +12,9 @@ import Activity from './pages/Activity';
 const Routes = () => (
   <BrowserRouter>
     <div>
-      <Route exact path="/" component={Login} />
+      <Route exact path="/login" component={Login} />
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/activity" component={Activity} />
+      <Route path="/" component={Activity} />
     </div>
   </BrowserRouter>
 );
