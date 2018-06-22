@@ -1,0 +1,130 @@
+@import 'palette.css';
+@import 'atomic.css';
+@import 'grid.css';
+/* */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+html,
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+input {
+  font: caption;
+}
+
+input {
+  padding: 0.5em;
+  border: 1px solid #f32e5b;
+  background-color: #fbbfcd;
+}
+
+button,
+.button,
+input[type='submit'] {
+  background-color: #f32e5b;
+  border: 1px solid #e10d3d;
+  color: white;
+  padding: 0.5em;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+button:hover,
+.button:hover,
+input[type='submit']:hover {
+  background-color: #f65e81;
+}
+button:active,
+.button:active,
+input[type='submit']:active {
+  background-color: #f4466e;
+}
+button.full-width,
+.button.full-width,
+input[type='submit'].full-width {
+  width: 100%;
+  margin: 1em 0;
+}
+
+.Application {
+  margin: 5rem auto;
+  max-width: 800px;
+}
+
+.Item-remove {
+  background-color: white;
+  color: #f65e81;
+  border: none;
+  margin-left: 1em;
+  outline: none;
+  padding: 0;
+}
+
+.Item-remove:hover {
+  background-color: white;
+  text-decoration: underline;
+}
+
+.NewItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.NewItem-input {
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  -webkit-animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@-webkit-keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
