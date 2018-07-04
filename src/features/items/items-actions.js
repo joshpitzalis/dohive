@@ -1,4 +1,4 @@
-import Api from '../../lib/api';
+// import Api from '../../lib/api';
 
 import {
   ADDED_NEW_ITEM,
@@ -22,14 +22,19 @@ export const addNewItem = value => {
     value
   };
 
-  return dispatch => {
-    Api.add(item).then(item => {
-      dispatch({
-        type: ADDED_NEW_ITEM,
-        payload: item
-      });
-    });
+  return {
+    type: ADDED_NEW_ITEM,
+    payload: item
   };
+
+  // return dispatch => {
+  //   Api.add(item).then(item => {
+  //     dispatch({
+  //       type: ADDED_NEW_ITEM,
+  //       payload: item
+  //     });
+  //   });
+  // };
 };
 
 export const toggleItem = id => ({
