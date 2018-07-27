@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 class NewItem extends Component {
   state = { value: '' };
 
