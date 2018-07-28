@@ -8,6 +8,9 @@ let Container = styled.div`
   margin: 8px;
   border: 1px solid lightgrey;
   border-radius: 2px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
 `;
 let Title = styled.h3`
   margin: 8px;
@@ -15,7 +18,9 @@ let Title = styled.h3`
   width: 100%;
 `;
 let TaskList = styled.div`
-  margin: 8px;
+  padding: 8px;
+  background-color: ${props => (props.isDraggingOver ? 'skyblue' : 'white')};
+  flex-grow: 1;
 `;
 
 export let Column = ({ column, tasks, add }) => (
@@ -31,11 +36,16 @@ export let Column = ({ column, tasks, add }) => (
       />
     </div>
     <Droppable droppableId={column.id}>
-      {provided => (
-        <TaskList innerRef={provided.innerRef} {...provided.droppableProps}>
-          {tasks.map((task, index) => (
-            <Task key={task.id} task={task} index={index} />
-          ))}
+      {(provided, snapshot) => (
+        <TaskList
+          innerRef={provided.innerRef}
+          {...provided.droppableProps}
+          isDraggingOver={snapshot.isDraggingOver}
+        >
+          {tasks &&
+            tasks.map((task, index) => (
+              <Task key={task.id} task={task} index={index} />
+            ))}
           {provided.placeholder}
         </TaskList>
       )}
