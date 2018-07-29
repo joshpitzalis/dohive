@@ -5,3 +5,5 @@
 - run an end to end test
 - get kanban board working
   x use a css reset
+
+* use https://inclusive-components.design/#components to create timer components
